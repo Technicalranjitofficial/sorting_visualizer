@@ -5,9 +5,325 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(13, 12, 12);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.box{
+
+  height: var(--height);
+  background-color: rebeccapurple;
+}
+
+.main_container{
+  width: 100%;
+  height: 100vh;
+
+
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  margin-top: 1%;
+  rotate: 180deg;
+  height: 75vh;
+}
+
+.head_container{
+  height: 10vh;
+  width: 100%;
+  display: block;
+  content: '';
+}
+.head_container2{
+  height: 10vh;
+  width: 100%;
+  display: none;
+  margin-top: 1%;
+  content: '';
+}
+
+.head_subContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.components1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+
+}
+
+.components1 button{
+  width: 100%;
+  height: 100%;
+  background-color:  rgb(13, 12, 12);
+  border: none;
+  color: wheat;
+  font-family: 'poppins';
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+
+.components1 button:hover{
+  background-color: grey;
+
+}
+
+.components1 button:disabled{
+  background-color: grey;
+  cursor: not-allowed;
+}
+.Slider_container{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.pc_version_slider{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.Slider_container .slider{
+  width: 50%;
+}
+.Slider_container2{
+
+  width: 90%;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.Slider_container2 .slider2{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+padding-left: 10px;
+}
+
+.slider_section{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  display: none;
+  
+}
+
+.slider_title{
+  color: wheat;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: 'poppins';
+}
+
+.fabIcon{
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+.fab_extra{
+  background-color: red;
+}
+.fab_extra2{
+  background-color: rgb(15, 74, 15);
+}
+
+.fab_extra button:disabled{
+background-color: rgb(15, 74, 15);
+cursor: not-allowed;
+}
+.fab_extra button:enabled{
+  background-color: rgb(117, 8, 8);
+}
+
+
+
+
+
+.Popup_main{
+  content: '';
+  background-color: transparent;
+  height: 10vh;
+  width: 100%;
+position: relative;
+  bottom: 0;
+  display: none;
+  right: 0;
+
+}
+
+
+.option_container{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: width 0.2s linear;
+  
+}
+
+
+
+
+
+.show_option{
+  display: block;
+}
+.hide_option{
+width: 0;
+}
+
+
+.options_row{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: stretch;
+  flex-direction: row;
+}
+
+.options_row .btn_row{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(13, 12, 12);
+ 
+}
+
+
+.btn_controller button:disabled{
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+
+.btn_row_hide{
+  display: none;
+}
+
+.options_row button{
+  width: 100%;
+  background-color: transparent;
+  border:none;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'poppins';
+  cursor: pointer;
+
+  
+}
+
+.option_btn_color_active{
+  color: yellow;
+}
+.option_btn_color_inactive{
+  color: wheat;
+}
+
+.controller_main{
+  width: 100%;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color:rgb(13, 12, 12);
+
+}
+
+.btn_controller{
+  height: 100%;
+  display: flex;
+width: 100%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn_controller button{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: rgb(13, 12, 12);
+  color: wheat;
+  font-family: 'poppins';
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+
+
+}
+
+@media only screen and (max-width: 800px) {
+  .head_container{
+    display: none;
+  }
+  .Popup_main{
+    display: block;
+    height: 14vh;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .container{
+    height: 70vh;
+
+  }
+  .Popup_main{
+   
+    height: 10vh;
+  }
+  .Slider_container2{
+
+    width: 50%;
+   
+  }
+
+  .slider_section{
+    display: block;
+    height: 14vh;
+  
+    
+  }
+
+  .pc_version_slider{
+    display: none;
+  }
+  .Slider_container2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+ justify-content: center;
+
+}
+
+  
+}
+
+
+
+
